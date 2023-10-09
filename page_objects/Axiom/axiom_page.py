@@ -29,4 +29,4 @@ class AxiomPage(BasePage):
         super()._scroll_500px()
         super()._wait_until_element_is_clickable(self.__practice_area1)
         super()._click(self.__practice_area1)
-        # checkin test
+        # checkin test comment added
