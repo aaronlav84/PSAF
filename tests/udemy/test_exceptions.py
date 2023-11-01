@@ -1,6 +1,7 @@
 import pytest
 from page_objects.udemy.exceptions_page import ExceptionsPage
 
+
 class TestExceptions:
     def test_no_such_element_exception(self, driver):
         exceptions_page = ExceptionsPage(driver)
@@ -16,6 +17,7 @@ class TestExceptions:
         exceptions_page.add_new_food("Carrots", 1)
         assert exceptions_page.verify_text_confirmation_message() == "Row 2 was saved", ("Error: Confirmation Message "
                                                                                          "not as expected!")
+
     @pytest.mark.exceptions
     def test_invalid_element_state_exception(self, driver):
         new_food = "Pear"
@@ -24,6 +26,7 @@ class TestExceptions:
         exceptions_page.edit_food_row_1(new_food, 10)
         assert exceptions_page.verify_text_confirmation_message() == "Row 1 was saved", ("Error: Confirmation Message "
                                                                                          "not as expected!")
+
     @pytest.mark.exceptions
     def test_state_element_reference_exception(self, driver):
         exceptions_page = ExceptionsPage(driver)

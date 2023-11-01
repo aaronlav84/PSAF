@@ -8,7 +8,6 @@ class TestPositiveScenarios:
 
     @pytest.mark.login
     @pytest.mark.positive
-
     def test_positive_login(self, driver):
         login_page = LoginPage(driver)
         login_page.open()
